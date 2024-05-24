@@ -256,7 +256,51 @@ section {
     border: rgb(255,255,255) 0.1rem solid;
 }
 
+/* ABOUT SECTION */
+
+#about {
+    
+}
+
+.section-container {
+    margin-top: 3rem;
+    height: 80%;
+}
+
 .details-container {
+    padding: 1rem;
     border: rgb(55,55,55) 0.2rem solid;
     border-radius: 1rem;
+    text-align: center;
+}
+
+.about-containers {
+    display: flex;
+    gap: 1rem;
+}
+
+.scroll-down-icon {
+    display: flex;
+    position: absolute;
+    right: 5rem;
+    bottom: -21rem;
+    height: 2rem;
+    width: 2rem;
+    margin: auto 0;
+}
+
+#projects {
+
+}
+
+.project-containers {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.project-container {
+    border: rgb(55,55,55) 0.1rem solid;
+    padding: 4rem;
+    border-radius: 2rem;
 }
