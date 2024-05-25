@@ -170,7 +170,7 @@ section {
 .section__profile-pic-container {
     display: flex;
     height: 400px;
-    width: 300px;
+    width: 400px;
     margin: auto 0;
 }
 
@@ -296,11 +296,4 @@ section {
 .project-containers {
     display: flex;
     justify-content: center;
-    gap: 5rem;
-}
-
-.project-container {
-    border: rgb(55,55,55) 0.1rem solid;
-    padding: 4rem;
-    border-radius: 2rem;
-}
+ 
