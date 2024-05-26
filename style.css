@@ -179,7 +179,7 @@ section {
     text-align: center;
 }
 
-.setcion__text p {
+.section__text p {
     font-weight: 600;
 }
 
@@ -289,6 +289,30 @@ section {
     margin: auto 0;
 }
 
+/* SKILLS SECTION */
+
+.skills-containers {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-container {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 3rem;
+    border: rgb(55,55,55) 0.2rem solid;
+    border-radius: 1rem;
+}
+
+.skill-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* PROJECTS SECTION */
+
 #projects {
 
 }
@@ -296,4 +320,4 @@ section {
 .project-containers {
     display: flex;
     justify-content: center;
- 
+}
