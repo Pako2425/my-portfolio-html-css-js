@@ -8,223 +8,169 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Patryk Kociński</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Patryk Kociński</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Patryk Kociński</h1>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contant</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-
-    <section id="profile">
-        <div class="section__profile-pic-container">
-            <img 
-                src="./assets/cropped_image.png" 
-                alt="Patryk Kociński profile picture"
-            />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Patryk Kociński</h1>
-            <p class="section__text__p2">Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Patryk_Kocinski_CV.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img
-                    class="icon" 
-                    src="./assets/linkedin-icon.png"
-                    alt="My Linkedin profile"
-                    onclick="location.href='https://www.linkedin.com/in/patryk-koci%C5%84ski-596b3127a/'"
-                />
-                <img
-                    class="icon"
-                    src="./assets/github-icon.png"
-                    alt="My Github profile"
-                    onclick="location.href='https://github.com/Pako2425'"
-                />
-
-            </div>
-        </div>
-    </section>
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                            class="icon" 
-                            src="./assets/education-icon.png"
-                            alt="Experience icon"
-                        />
-                        <h1>Education</h1>
-                        <p>Bachelor of Engineering</p>
-                    </div>
-                    <div class="text-container">
-                        <p>Długi tekst o moim wykształceniu</p>
-                    </div>
+        <h1 class="section-title">About</h1>
+        <div class="container">
+            <div class="about-photo-container">
+                <img
+                    class="about-photo"
+                    src="assets/cropped_image.png"
+                    alt="my-photo"
+                />
+            </div>
+            <div class="about-text-container">
+                <p class="about-text">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                    culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+                <div class="about-buttons">
+                    <button class="btn download-resume">Resume</button>
+                    <button class="btn contact">Contact me</button>
                 </div>
             </div>
         </div>
-        <img
-            class="scroll-down-icon"
-            src="./assets/scroll-down.png"
-            onclick="location.href='#skills'"
-        />
     </section>
     <section id="skills">
-        <h1 class="title">My Skills</h1>
-        <div class="section-container">
-            <div class="skills-details-container">
-                <div class="skills-containers">
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/java.svg"
-                            alt="Java"
-                        />
-                        <h1 class="skill-title-text">Java</h1>
-                    </div>
-
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/spring.svg"
-                            alt="springboot"
-                        />
-                        <h1 class="skill-title-text">Springboot</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/mysql.svg"
-                            alt="mysql"
-                        />
-                        <h1 class="skill-title-text">MySQL</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/docker.svg"
-                            alt="docker"
-                        />
-                        <h1 class="skill-title-text">Docker</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/react.svg"
-                            alt="react"
-                        />
-                        <h1 class="skill-title-text">React</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/javascript.svg"
-                            alt="javascript"
-                        />
-                        <h1 class="skill-title-text">JavaScript</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/html.svg"
-                            alt="html"
-                        />
-                        <h1 class="skill-title-text">HTML</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/css.svg"
-                            alt="css"
-                        />
-                        <h1 class="skill-title-text">CSS</h1>
-                    </div>
-                    
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/git.svg"
-                            alt="git"
-                        />
-                        <h1 class="skill-title-text">Git</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/nodejs.svg"
-                            alt="nodejs"
-                        />
-                        <h1 class="skill-title-text">Node.js</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/amazon.svg"
-                            alt="aws"
-                        />
-                        <h1 class="skill-title-text">AWS</h1>
-                    </div>
-                    <div class="skill-container">
-                        <img 
-                            class="skill-icon"
-                            src="./assets/android.svg"
-                            alt="android-studio"
-                        />
-                        <h1 class="skill-title-text">Android</h1>
-                    </div>
-
+        <h1>Skills</h1>
+        <div class="container">
+            <div class="skills-container">
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/java.svg"
+                        alt="java"
+                    />
+                    <p class="skill-title">Java</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/spring.svg"
+                        alt="spring-boot"
+                    />
+                    <p class="skill-title">Springboot</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/mysql.svg"
+                        alt="mysql"
+                    />
+                    <p class="skill-title">MySQL</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/docker.svg"
+                        alt="docker"
+                    />
+                    <p class="skill-title">Docker</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/nodejs.svg"
+                        alt="nodejs"
+                    />
+                    <p class="skill-title">Node.js</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/html.svg"
+                        alt="html"
+                    />
+                    <p class="skill-title">HTML</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/css.svg"
+                        alt="css"
+                    />
+                    <p class="skill-title">CSS</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/javascript.svg"
+                        alt="javascript"
+                    />
+                    <p class="skill-title">JavaScript</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/react.svg"
+                        alt="react"
+                    />
+                    <p class="skill-title">React</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/git.svg"
+                        alt="git"
+                    />
+                    <p class="skill-title">Git</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/amazon.svg"
+                        alt="aws"
+                    />
+                    <p class="skill-title">AWS</p>
+                </div>
+                <div class="skill-container">
+                    <img 
+                        class="skill-icon"
+                        src="./assets/android-studio.svg"
+                        alt="android-studio"
+                    />
+                    <p class="skill-title">Android</p>
                 </div>
             </div>
         </div>
     </section>
     <section id="projects">
-        <h1 class="title">Projects</h1>
-        <div class="section-container">
-            <div class="projects-container">
-                <div class="left-column">
-                    <div class="project-container">
-                    <p>Web App</p>
-                    </div>
-                    <div class="project-container">
-                        <p>Mobile App</p>
-                    </div>
-                </div>
-                <div class="right-column">
-                    <div class="project-container">
-                        <p>Currency calculator</p>
-                    </div>
-                    <div class="project-container">
-                        <p>Others</p>
-                    </div>
-                </div>
-            </div>
+        <h1>Projects</h1>
+        <div class="container">
+            <button class="btn-project-category">Web app</button>
+            <button>Mobile app</button>
+            <button>Others</button>
         </div>
+    </section>
+    <section id="contact">
+        <h1>Contact me</h1>
     </section>
 
     <script src="script.js"></script>
