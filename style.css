@@ -318,7 +318,7 @@ section {
 
 }
 
-.project-containers {
+.projects-container {
     display: flex;
     justify-content: center;
 }
