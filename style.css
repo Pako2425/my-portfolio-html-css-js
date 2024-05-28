@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -129,6 +130,27 @@ section {
     width: 80%;
 }
 
-.btn-project-category {
+.projects-category-bar ul {
+    display: flex;
+    list-style: none;
     
+}
+
+.projects-category-bar ul li button {
+    width: 100px;
+    color: rgb(100,100,100);
+    background: none;
+    border: white 1.5px solid;
+    border-radius: 6px;
+    padding: 10px;
+    margin-inline: 10px;
+}
+
+.projects-category-bar ul li button:hover {
+    color: black;
+}
+
+.projects-category-bar ul li button:active {
+    border: rgb(200,200,200) 1.5px solid;
+    transition: 0.1;
 }
