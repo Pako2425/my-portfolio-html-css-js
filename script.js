@@ -5,6 +5,18 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+document.getElementById('webapp-btn').addEventListener('click', handleProjectCategoryButtons);
+document.getElementById('mobileapp-btn').addEventListener('click', handleProjectCategoryButtons);
+document.getElementById('other-btn').addEventListener('click', handleProjectCategoryButtons);
+
 function handleProjectCategoryButtons(event) {
-    console.log(event);
+    const buttons = document.querySelectorAll(".project-category-btn");
+
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+    
+    console.log(buttons);
 }
