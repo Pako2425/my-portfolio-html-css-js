@@ -178,6 +178,11 @@ section {
     cursor: default;
 }
 
+.skill-container:hover {
+    transform: translate(0, -2px);
+    transition: 0.1s;
+}
+
 .skill-icon {
     width: 80%;
 }
@@ -190,7 +195,7 @@ section {
 
 .project-category-btn {
     width: 100px;
-    color: rgb(100,100,100);
+    color: rgb(120,120,120);
     background: none;
     border: white 1.5px solid;
     border-radius: 6px;
@@ -328,4 +333,5 @@ section {
 
 .btn-cm:hover {
     background-color: white;
+    transition: 0.15s;
 }
