@@ -39,6 +39,34 @@ a {
     max-width: 1100px;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.linkedin-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.github-icon {
+    width: 27px;
+    height: 27px;
+}
+
+.about-left-column,
+.about-right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-left-column {
+    align-content: flex-start;
+}
+
 .main-menu ul {
     display: flex;
     list-style: none;
