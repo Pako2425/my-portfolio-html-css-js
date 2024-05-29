@@ -71,14 +71,19 @@ section {
 }
 
 .about-text-container {
-    width: 600px;
+    max-width: 400px;
     text-align: left;
+}
+
+.about-text {
+    font-weight: 300;
 }
 
 .about-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin: 10px;
 }
 
 .btn {
@@ -182,17 +187,14 @@ section {
 .project-photo-container {
     display: flex;
     justify-content: center;
-    background-color: red;
-    border-color: black;
-    border: solid;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .project-text-container {
     display: inline;
     position:relative;
-    background-color: green;
 }
 
 .project-title {
