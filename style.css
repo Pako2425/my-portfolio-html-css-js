@@ -139,15 +139,13 @@ section {
     height: 40px;
     width: 100px;
     border-radius: 8px;
+    font-weight: 400;
+    font-size: smaller;
+    text-align: center;
+    padding: 8px;
 }
 
-.btn.download-resume {
-    border: blueviolet 1.5px solid;
-    background-color: blueviolet;
-    color: white;
-    transition: 0.3s;
-}
-
+.btn.download-resume,
 .btn.contact {
     border: blueviolet 1.5px solid;
     background-color: blueviolet;
@@ -179,7 +177,7 @@ section {
 }
 
 .skill-container:hover {
-    transform: translate(0, -2px);
+    transform: translate(0, -4px);
     transition: 0.1s;
 }
 
@@ -322,7 +320,7 @@ section {
     height: 22px;
 }
 
-.btn-cm {
+.btn-cm a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,7 +329,7 @@ section {
     border-radius: 50px;
 }
 
-.btn-cm:hover {
+.btn-cm a:hover {
     background-color: white;
     transition: 0.15s;
 }
