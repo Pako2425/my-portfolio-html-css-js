@@ -16,3 +16,4 @@ function handleProjectCategoryButtons(event) {
     
     console.log(buttons);
 }
+
