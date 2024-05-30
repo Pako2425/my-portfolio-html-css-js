@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    
+    <div class="project-details-window">
+        <p>Wyskakujące okienko</p>
+    </div>
+    
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -62,13 +67,16 @@
             <div class="about-right-column">
                 <div class="about-text-container">
                     <p class="about-text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                        culpa qui officia deserunt mollit anim id est laborum."
+                        Hi! My name is <span style="color: orange"><u>Patryk Kociński</u></span>
+                        and I love programming, especially I am interested in the areas of 
+                        <b>backend</b>, <b>fullstack</b> and <b>frontend</b>.
+                        I am actively seeking opportunities to become a 
+                        valueable team member as a 
+                        <span style="background-color: rgba(197, 255, 109, 0.7)"
+                        >Junior Developer</span>
+                        and to gain my programming skills. I am ambitious, eager to 
+                        enhance my skills, unafraid of challenges, and find 
+                        great pleasure in learning new things.
                     </p>
                     <div class="about-buttons">
                         <a class="btn download-resume" href="assets/Patryk_Kocinski_CV.pdf" target="_blank">Resume</a>
@@ -200,20 +208,40 @@
                     </li>
                 </ul>
             </div>
-            <div class="project-container" id="webapp-project">
-                <div class=project-photo-container>
-                    <img
-                        class="project-photo"
-                        src="./assets/projects/memes-p1.png"
-                        alt="web app photo"
-                    />
+            <div class="projects-container" id="webapp-project">
+        
+                <div class="project-container">
+                    <div class=project-photo-container>
+                        <img
+                            class="project-photo"
+                            src="./assets/projects/memes-p1.png"
+                            alt="web app photo"
+                        />
+                    </div>
+                    <div class="project-text-container">
+                        <p class="project-title">Memes web app</p>
+                    </div>
+                    <div class="project-text-container">
+                        <p class="project-description">krotki opis projektu</p>
+                    </div>
                 </div>
-                <div class="project-text-container">
-                    <p class="project-title">Memes web app</p>
+
+                <div class="project-container">
+                    <div class=project-photo-container>
+                        <img
+                            class="project-photo"
+                            src="./assets/projects/currency-calculator.png"
+                            alt="currency calculator"
+                        />
+                    </div>
+                    <div class="project-text-container">
+                        <p class="project-title">Currency calculator</p>
+                    </div>
+                    <div class="project-text-container">
+                        <p class="project-description">krotki opis projektu</p>
+                    </div>
                 </div>
-                <div class="project-text-container">
-                    <p class="project-description">krotki opis projektu</p>
-                </div>
+
             </div>
             <div class="project-container" id="mobileapp-project">
                 <div class=project-photo-container>
@@ -298,7 +326,7 @@
         </div>
     </section>
 
-
+    
     <script src="script.js"></script>
 </body>
 </html>

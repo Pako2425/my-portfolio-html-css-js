@@ -45,3 +45,6 @@ function handleProjectCategoryButtons(event) {
     console.log("dfsdfds");
 }
 
+function handleProjectDetailsWindow(event) {
+
+}
