@@ -3,18 +3,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectsPath = "./assets/projects/";
 
     const myProjects = {
-        memes: ["memes-p1.png", 
-        "memes-p2.png", 
-        "memes-p3.png"],
+        memes: {
+            images: ["memes-p1.png", "memes-p2.png", "memes-p3.png", "memes-p4.png"], 
+            projectLink: "https://github.com/Pako2425/App_for_memes"
+        },
 
-        reelinsight: ["reelinsight-p1.png", 
-        "reelinsight-p2.png", 
-        "reelinsight-p3.png", 
-        "reelinsight-p4.png", 
-        "reelinsight-p5.png", 
-        "reelinsight-p6.png"],
+        reelinsight: {
+            images: ["reelinsight-p1.png", "reelinsight-p2.png", "reelinsight-p3.png", "reelinsight-p4.png", "reelinsight-p5.png", "reelinsight-p6.png", "reelinsight-p7.png"],
+            projectLink: "https://github.com/Pako2425/Reel-Insight-Movie-Details-at-Your-Fingertips"
+        },
 
-        calculator: ["currency-calculator-p1.png"]
+        calculator: {
+            images: ["currency-calculator-p1.png", "currency-calculator-p2.png"],
+            projectLink: "https://github.com/Pako2425/Pako2425.github.io"
+        },
+
+        others: {
+            images: ["others-p1.png"],
+            projectLink: "https://github.com/Pako2425/"
+        }
     };                         
 
     document.getElementById('webapp-btn').addEventListener('click', handleProjectCategoryEvents);
@@ -81,11 +88,10 @@ document.addEventListener("DOMContentLoaded", function() {
         detailsWindow.style.display="none";
     }
 
-    function loadProjectImages(projectName) {
+    function loadSmallProjectImages(projectName) {
         const smallImagesContainer = document.querySelector('.details-window-small-images-container');
         smallImagesContainer.innerHTML = "";
-
-        myProjects[projectName].forEach((image) => {
+        myProjects[projectName].images.forEach((image) => {
             const path = projectsPath + projectName + "/" + image;
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('details-window-small-image-container');
@@ -97,10 +103,26 @@ document.addEventListener("DOMContentLoaded", function() {
             imageContainer.appendChild(img);
             smallImagesContainer.appendChild(imageContainer);
         });
+    }
 
-        const mainImage = document.querySelector('.details-window-main-image');
-        mainImage.src = document.querySelector('.small-photo').src;
+    function loadMainProjectImage(projectName) {
+        const imageContainer = document.querySelector('.details-window-main-image-container');
+        imageContainer.innerHTML = "";
+        const imageLink = document.createElement('a');
+        imageLink.href = myProjects[projectName].projectLink;
+        
+        const mainImage = document.createElement('img');
+        mainImage.src=document.querySelector('.small-photo').src;
+        mainImage.alt="image";
+        mainImage.setAttribute('class', 'details-window-main-image');
+        imageLink.appendChild(mainImage);
+        imageContainer.appendChild(imageLink);
+        console.log("done")
+    }
 
+    function loadProjectImages(projectName) {
+        loadSmallProjectImages(projectName);
+        loadMainProjectImage(projectName);
     }
 
     function handleDetails(event) {

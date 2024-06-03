@@ -386,7 +386,7 @@ section {
     border-radius: 8px;
     cursor: default;
     z-index: 1001;
-    
+    overflow: hidden;
 }
 
 #close-window {
@@ -413,14 +413,15 @@ section {
     height: 70%;
     justify-content: center;
     align-items: center;
-    
+    overflow: hidden;
     background-color: white;
 }
 
 .details-window-main-image {
+    display: flex;
     height: 100%;
+    max-height: 200px;
     width: auto;
-
 }
 
 .details-window-small-images-container {
@@ -440,7 +441,7 @@ section {
     border: solid;
     width: 86px;
     height: 86px;
-    border-color: black;
+    border-color: white;
     overflow: hidden;
 }
 
