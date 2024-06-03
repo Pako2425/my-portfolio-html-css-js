@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         calculator: {
             images: ["currency-calculator-p1.png", "currency-calculator-p2.png"],
-            projectLink: "https://github.com/Pako2425/Pako2425.github.io"
+            projectLink: "https://github.com/Pako2425/currency-calculator"
         },
 
         others: {
