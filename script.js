@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "memes-p2.png", 
         "memes-p3.png"],
 
-        reelInsight: ["reelinsight-p1.png", 
+        reelinsight: ["reelinsight-p1.png", 
         "reelinsight-p2.png", 
         "reelinsight-p3.png", 
         "reelinsight-p4.png", 
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const webappCategory = document.getElementById('webapp-project');
         const mobileappCategory = document.getElementById('mobileapp-project');
         const otherCategory = document.getElementById('other-project');
-
         webappCategory.style.display="none";
         mobileappCategory.style.display="none";
         otherCategory.style.display="none";
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleProjectCategoryButtons(event) {
         const buttons = document.querySelectorAll(".project-category-btn");
-
         buttons.forEach(button => {
             button.classList.remove("active");
         });
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function openDetailsWindow(event) {
         const blockingLayer = document.getElementById("project-details-window-background");
         const detailsWindow = document.getElementById("project-details-window");
-
         blockingLayer.style.display="flex";
         detailsWindow.style.display="flex";
         
@@ -80,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeDetailsWindow(event) {
         const blockingLayer = document.getElementById("project-details-window-background");
         const detailsWindow = document.getElementById("project-details-window");
-
         blockingLayer.style.display="none";
         detailsWindow.style.display="none";
     }
@@ -91,11 +87,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         myProjects[projectName].forEach((image) => {
             const path = projectsPath + projectName + "/" + image;
-            console.log(path);
-
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('details-window-small-image-container');
-            
+            imageContainer.setAttribute('id', image);
+            imageContainer.addEventListener('click', (event) => handleSmallImages(event));
             const img = document.createElement('img');
             img.src = path;
             img.classList.add('small-photo');
@@ -103,12 +98,23 @@ document.addEventListener("DOMContentLoaded", function() {
             smallImagesContainer.appendChild(imageContainer);
         });
 
+        const mainImage = document.querySelector('.details-window-main-image');
+        mainImage.src = document.querySelector('.small-photo').src;
 
     }
 
     function handleDetails(event) {
         openDetailsWindow(event);
         loadProjectImages(event.currentTarget.id);
+    }
+
+    function handleSmallImages(event) {
+        const mainImage = document.querySelector('.details-window-main-image');
+        const path = mainImage.src;
+        const ar = path.split('/');
+        ar[ar.length - 1] = event.currentTarget.id;
+        const newPath = ar.join('/');
+        mainImage.src = newPath;
     }
 
 });
