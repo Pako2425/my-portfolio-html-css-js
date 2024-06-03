@@ -379,13 +379,14 @@ section {
 
 #project-details-window {
     display: flex;
+    flex-direction: column;
     width: 50%;
     height: 80%;
     background-color: white;
     border-radius: 8px;
     cursor: default;
     z-index: 1001;
-    overflow: hidden;
+    
 }
 
 #close-window {
@@ -396,11 +397,51 @@ section {
     padding: 4px;
     position: relative;
     top: 0%;
-    left: 96%;
-    
+    left: 100%;
+    transform: translate(-1.4em, 0);
+    background: none;
 }
 
 #close-window:hover {
     background-color: rgb(250,0,0);
     color: white;
+}
+
+.details-window-main-image-container {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+}
+
+.details-window-main-image {
+    height: 100%;
+    width: auto;
+
+}
+
+.details-window-small-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: antiquewhite;
+}
+
+.details-window-small-image-container {
+    display: flex;
+    padding: 10px;
+    border: solid;
+    width: 86px;
+    height: 86px;
+    border-color: black;
+}
+
+.small-photo {
+    height: auto;
+    width: 100%
 }

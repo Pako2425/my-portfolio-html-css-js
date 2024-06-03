@@ -2,6 +2,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const projectsPath = "./assets/projects/";
 
+    const myProjects = {
+        memes: ["memes-p1.png", 
+        "memes-p2.png", 
+        "memes-p3.png"],
+
+        reelInsight: ["reelinsight-p1.png", 
+        "reelinsight-p2.png", 
+        "reelinsight-p3.png", 
+        "reelinsight-p4.png", 
+        "reelinsight-p5.png", 
+        "reelinsight-p6.png"],
+
+        calculator: ["currency-calculator-p1.png"]
+    };                         
+
     document.getElementById('webapp-btn').addEventListener('click', handleProjectCategoryEvents);
     document.getElementById('mobileapp-btn').addEventListener('click', handleProjectCategoryEvents);
     document.getElementById('other-btn').addEventListener('click', handleProjectCategoryEvents);
@@ -10,7 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('mobileapp-project').style.display="none";
     document.getElementById('other-project').style.display="none";
 
-    document.getElementById('memes-webapp').addEventListener('click', openDetailsWindow);
+    const projectContainers = document.querySelectorAll('.project-container');
+    projectContainers.forEach((project) => {
+        project.addEventListener('click', (event) => {
+            handleDetails(event);
+        });
+    });
+
     document.getElementById('close-window').addEventListener('click', closeDetailsWindow);
 
     function handleProjectCategoryEvents(event) {
@@ -51,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function() {
         blockingLayer.style.display="flex";
         detailsWindow.style.display="flex";
         
-        //blockingLayer.addEventListener('click', (event) => {
-        //    event.stopPropagation();
-        //});
+        blockingLayer.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
     }
 
     function closeDetailsWindow(event) {
@@ -62,6 +83,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
         blockingLayer.style.display="none";
         detailsWindow.style.display="none";
+    }
+
+    function loadProjectImages(projectName) {
+        const smallImagesContainer = document.querySelector('.details-window-small-images-container');
+        smallImagesContainer.innerHTML = "";
+
+        myProjects[projectName].forEach((image) => {
+            const path = projectsPath + projectName + "/" + image;
+            console.log(path);
+
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('details-window-small-image-container');
+            
+            const img = document.createElement('img');
+            img.src = path;
+            img.classList.add('small-photo');
+            imageContainer.appendChild(img);
+            smallImagesContainer.appendChild(imageContainer);
+        });
+
+
+    }
+
+    function handleDetails(event) {
+        openDetailsWindow(event);
+        loadProjectImages(event.currentTarget.id);
     }
 
 });
